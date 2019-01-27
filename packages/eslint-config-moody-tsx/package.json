@@ -1,0 +1,26 @@
+{
+  "name": "eslint-config-moody-tsx",
+  "version": "0.0.0",
+  "description": "ESLint moody config for JS, TS and TSX",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "moody"
+  ],
+  "author": "ficristo",
+  "homepage": "",
+  "license": "MIT",
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
+  "scripts": {},
+  "peerDependencies": {
+    "eslint": "^5.12.1"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.1.0",
+    "@typescript-eslint/parser": "^1.1.0",
+    "eslint-plugin-react": "^7.12.4"
+  }
+}
