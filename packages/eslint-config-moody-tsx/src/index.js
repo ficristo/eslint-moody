@@ -1,6 +1,9 @@
 /* eslint-env node */
 
 module.exports = {
+    "globals": {
+        "console": false,
+    },
     // the rules below should be sorted in a same way they are sorted on http://eslint.org/docs/rules page
     "rules": {
         // http://eslint.org/docs/rules/#possible-errors
@@ -8,6 +11,7 @@ module.exports = {
         "getter-return": "error",
         "no-compare-neg-zero": "error",
         "no-cond-assign": "error",
+        "no-console": "warn",
         "no-constant-condition": ["error", { "checkLoops": false }],
         "no-control-regex": "error",
         "no-debugger": "error",
@@ -31,19 +35,19 @@ module.exports = {
         "no-unsafe-finally": "error",
         "no-unsafe-negation": "error",
         "use-isnan": "error",
-        "valid-jsdoc": "off",
+        "valid-jsdoc": "off", // Rule deprecated
         "valid-typeof": "error",
         // http://eslint.org/docs/rules/#best-practices
         "curly": "error",
-        "eqeqeq": ["error", "always", { "null": "ignore" }],
-        "guard-for-in": "off",
+        "eqeqeq": "error",
+        "guard-for-in": "error",
         "no-caller": "error",
         "no-case-declarations": "error",
         "no-else-return": ["error", { allowElseIf: false }],
         "no-empty-pattern": "error",
         "no-fallthrough": "error",
         "no-global-assign": "error",
-        "no-invalid-this": "off",
+        "no-invalid-this": "error",
         "no-iterator": "error",
         "no-loop-func": "error",
         "no-multi-str": "error",
@@ -63,7 +67,7 @@ module.exports = {
         // http://eslint.org/docs/rules/#variables
         "no-delete-var": "error",
         "no-shadow-restricted-names": "error",
-        "no-shadow": "warn",
+        "no-shadow": "error",
         "no-undef": "error",
         "no-unused-vars": ["error", { "vars": "all", "args": "none" }],
         "no-use-before-define": "off",
@@ -72,8 +76,8 @@ module.exports = {
         // http://eslint.org/docs/rules/#stylistic-issues
         "block-spacing": "error",
         "brace-style": ["error", "1tbs", { allowSingleLine: true }],
-        "camelcase": "warn",
-        "comma-dangle": "error",
+        "camelcase": ["error", { "properties": "never" }],
+        "comma-dangle": ["error", "never"],
         "comma-spacing": "error",
         "comma-style": ["error", "last"],
         "computed-property-spacing": "error",
@@ -91,21 +95,13 @@ module.exports = {
             "flatTernaryExpressions": false
         }],
         "key-spacing": ["off", { beforeColon: false, afterColon: true }],
-        "max-len": ["off", 120],
+        "max-len": ["error", 120],
         "multiline-ternary": ["error", "always-multiline"],
-        "new-cap": ["off", {
-            "capIsNewExceptions": [
-                "$.Deferred",
-                "$.Event",
-                "CodeMirror.Pos",
-                "Immutable.Map",
-                "Immutable.List",
-                "JSLINT"
-            ]
-        }],
+        "new-cap": "error",
         "new-parens": "error",
         "no-bitwise": "error",
         "no-mixed-spaces-and-tabs": "error",
+        "no-multiple-empty-lines": ["error", { "max": 2, "maxBOF": 1, "maxEOF": 1 }],
         "no-new-object": "error",
         "no-tabs": "error",
         "no-trailing-spaces": "error",
@@ -153,7 +149,8 @@ module.exports = {
                 "@typescript-eslint/no-unused-vars": ["error", { "vars": "all", "args": "none" }],
                 // http://eslint.org/docs/rules/#stylistic-issues
                 "camelcase": "off",
-                "@typescript-eslint/camelcase": "warn",
+                "@typescript-eslint/camelcase": ["error", { "properties": "never" }],
+                "comma-dangle": ["error", "never"],
                 "indent": "off",
                 "@typescript-eslint/indent": ["error", 4, {
                     "SwitchCase": 1,
@@ -172,6 +169,7 @@ module.exports = {
                 "no-var": "error",
                 "prefer-const": "error",
                 // Specific to TypeScript
+                "@typescript-eslint/array-type": ["error", "generic"],
                 "@typescript-eslint/member-delimiter-style": ["error", {
                     multiline: {
                         delimiter: "semi",
@@ -182,7 +180,7 @@ module.exports = {
                         requireLast: false
                     }
                 }],
-                // react plugin
+                // React plugin
                 "react/jsx-uses-react": "error",
                 "react/jsx-uses-vars": "error"
             }
