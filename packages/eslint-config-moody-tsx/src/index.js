@@ -44,6 +44,7 @@ module.exports = {
         "no-caller": "error",
         "no-case-declarations": "error",
         "no-else-return": ["error", { allowElseIf: false }],
+        "no-empty-function": "error",
         "no-empty-pattern": "error",
         "no-fallthrough": "error",
         "no-global-assign": "error",
@@ -95,6 +96,7 @@ module.exports = {
             "flatTernaryExpressions": false
         }],
         "key-spacing": ["off", { beforeColon: false, afterColon: true }],
+        "keyword-spacing": "error",
         "max-len": ["error", 120],
         "multiline-ternary": ["error", "always-multiline"],
         "new-cap": "error",
@@ -105,6 +107,7 @@ module.exports = {
         "no-new-object": "error",
         "no-tabs": "error",
         "no-trailing-spaces": "error",
+        "no-whitespace-before-property": "error",
         "operator-linebreak": ["error", "after", {
             "overrides": {
                 "?": "before",
@@ -114,6 +117,11 @@ module.exports = {
         "quotes": ["error", "double", { "avoidEscape": true }],
         "semi-spacing": "error",
         "semi": "error",
+        "space-before-blocks": "error",
+        "space-before-function-paren": ["error", {"anonymous": "always", "named": "never", "asyncArrow": "always"}],
+        "space-in-parens": "error",
+        "space-infix-ops": "error",
+        "space-unary-ops": "error",
         // https://eslint.org/docs/rules/#ecmascript-6
         "constructor-super": "error",
         "no-class-assign": "error",
