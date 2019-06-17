@@ -176,6 +176,8 @@ module.exports = {
                 // https://eslint.org/docs/rules/#ecmascript-6
                 "no-var": "error",
                 "prefer-const": "error",
+                "semi": "off",
+                "@typescript-eslint/semi": "error",
                 // Specific to TypeScript
                 "@typescript-eslint/array-type": ["error", "generic"],
                 "@typescript-eslint/member-delimiter-style": ["error", {
