@@ -20,7 +20,7 @@
   ],
   "scripts": {},
   "peerDependencies": {
-    "eslint": "^5.16.0"
+    "eslint": "^6.5.0"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^2.3.1",
