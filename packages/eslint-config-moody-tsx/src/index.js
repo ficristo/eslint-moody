@@ -179,7 +179,7 @@ module.exports = {
                 "semi": "off",
                 "@typescript-eslint/semi": "error",
                 // Specific to TypeScript
-                "@typescript-eslint/array-type": ["error", "generic"],
+                "@typescript-eslint/array-type": ["error", { default: "generic" }],
                 "@typescript-eslint/member-delimiter-style": ["error", {
                     multiline: {
                         delimiter: "semi",
