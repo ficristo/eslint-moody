@@ -20,15 +20,15 @@
   ],
   "scripts": {},
   "peerDependencies": {
-    "eslint": "^6.5.0"
+    "eslint": "^6.6.0"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.3.1",
-    "@typescript-eslint/parser": "^2.3.1",
-    "eslint-plugin-react": "^7.14.3"
+    "@typescript-eslint/eslint-plugin": "^2.5.0",
+    "@typescript-eslint/parser": "^2.5.0",
+    "eslint-plugin-react": "^7.16.0"
   },
   "devDependencies": {
-    "eslint": "^6.5.0",
-    "typescript": "^3.6.3"
+    "eslint": "^6.6.0",
+    "typescript": "^3.6.4"
   }
 }
