@@ -78,7 +78,7 @@ module.exports = {
         "block-spacing": "error",
         "brace-style": ["error", "1tbs", { allowSingleLine: true }],
         "camelcase": ["error", { "properties": "never" }],
-        "comma-dangle": ["error", "never"],
+        "comma-dangle": ["error", "only-multiline"],
         "comma-spacing": "error",
         "comma-style": ["error", "last"],
         "computed-property-spacing": "error",
@@ -153,12 +153,43 @@ module.exports = {
             ],
             "rules": {
                 // http://eslint.org/docs/rules/#variables
+                "no-shadow": "off",
+                "@typescript-eslint/no-shadow": ["error"],
+                "no-undef": "off",
                 "no-unused-vars": "off",
                 "@typescript-eslint/no-unused-vars": ["error", { "vars": "all", "args": "none" }],
                 // http://eslint.org/docs/rules/#stylistic-issues
                 "camelcase": "off",
-                "@typescript-eslint/camelcase": ["error", { "properties": "never" }],
-                "comma-dangle": ["error", "never"],
+                "@typescript-eslint/naming-convention": [
+                    "error",
+                    {
+                        "selector": "default",
+                        "format": ["camelCase"]
+                    },
+                
+                    {
+                        "selector": "variable",
+                        "format": ["camelCase", "UPPER_CASE"]
+                    },
+                    {
+                        "selector": "parameter",
+                        "format": ["camelCase"],
+                        "leadingUnderscore": "allow"
+                    },
+                
+                    {
+                        "selector": "memberLike",
+                        "modifiers": ["private"],
+                        "format": ["camelCase"],
+                        "leadingUnderscore": "require"
+                    },
+                
+                    {
+                        "selector": "typeLike",
+                        "format": ["PascalCase"]
+                    }
+                ],
+                "comma-dangle": ["error", "only-multiline"],
                 "indent": "off",
                 "@typescript-eslint/indent": ["error", 4, {
                     "SwitchCase": 1,
@@ -190,6 +221,7 @@ module.exports = {
                         requireLast: false
                     }
                 }],
+                "@typescript-eslint/explicit-function-return-type": "error",
                 // React plugin
                 "react/jsx-uses-react": "error",
                 "react/jsx-uses-vars": "error"
