@@ -84,17 +84,6 @@ module.exports = {
         "computed-property-spacing": "error",
         "eol-last": "error",
         "func-call-spacing": "error",
-        "indent": ["error", 4, {
-            "SwitchCase": 1,
-            "VariableDeclarator": 1,
-            "FunctionDeclaration": { "parameters": "first", body: 1 },
-            "FunctionExpression": { "parameters": "first", body: 1 },
-            "CallExpression": { "arguments": 1 },
-            "ArrayExpression": 1,
-            "ObjectExpression": 1,
-            "ImportDeclaration": 1,
-            "flatTernaryExpressions": false
-        }],
         "key-spacing": ["off", { beforeColon: false, afterColon: true }],
         "keyword-spacing": "error",
         "max-len": ["error", 120],
@@ -116,7 +105,6 @@ module.exports = {
         }],
         "quotes": ["error", "double", { "avoidEscape": true }],
         "semi-spacing": "error",
-        "semi": "error",
         "space-before-blocks": "error",
         "space-before-function-paren": ["error", {"anonymous": "always", "named": "never", "asyncArrow": "always"}],
         "space-in-parens": "error",
@@ -157,7 +145,7 @@ module.exports = {
                 "@typescript-eslint/no-shadow": ["error"],
                 "no-undef": "off",
                 "no-unused-vars": "off",
-                "@typescript-eslint/no-unused-vars": ["error", { "vars": "all", "args": "none" }],
+                "@typescript-eslint/no-unused-vars": ["error", { "vars": "all", "args": "none", "caughtErrors": "none" }],
                 // http://eslint.org/docs/rules/#stylistic-issues
                 "camelcase": "off",
                 "@typescript-eslint/naming-convention": [
@@ -190,25 +178,11 @@ module.exports = {
                     }
                 ],
                 "comma-dangle": ["error", "only-multiline"],
-                "indent": "off",
-                "@typescript-eslint/indent": ["error", 4, {
-                    "SwitchCase": 1,
-                    "VariableDeclarator": 1,
-                    "FunctionDeclaration": { "parameters": "first", body: 1 },
-                    "FunctionExpression": { "parameters": "first", body: 1 },
-                    "CallExpression": { "arguments": 1 },
-                    "ArrayExpression": 1,
-                    "ObjectExpression": 1,
-                    "ImportDeclaration": 1,
-                    "flatTernaryExpressions": false
-                }],
                 "one-var": ["error", { let: "never", const: "never" }],
                 "one-var-declaration-per-line": ["error", "always"],
                 // https://eslint.org/docs/rules/#ecmascript-6
                 "no-var": "error",
                 "prefer-const": "error",
-                "semi": "off",
-                "@typescript-eslint/semi": "error",
                 // Specific to TypeScript
                 "@typescript-eslint/array-type": ["error", { default: "generic" }],
                 "@typescript-eslint/member-delimiter-style": ["error", {
